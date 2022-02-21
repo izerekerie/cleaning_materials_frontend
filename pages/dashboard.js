@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import React, { UseState } from 'react'
 import Image from 'next/image'
 import Layout from '../components/Layout'
 import add from '../public/images/add.svg'
 import close from '../public/images/close.svg'
 import Modal from 'react-modal'
 export default function dashboard() {
-    const [isModalOpen,setIsModalopen]=useState(false)
+    const [isModalOpen,setIsModalopen]=UseState(false)
     const panels=[
         {
           title:'Total Tools',
