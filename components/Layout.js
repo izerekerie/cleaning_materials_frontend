@@ -8,7 +8,7 @@ function Layout({children}) {
          <div className='flex h-screen '>
              <Sidebar/>
         
-             <div className=' flex w-3/4 h-screen m-2'>
+             <div className=' flex w-3/4 h-screen '>
                 
              {children}
              </div>

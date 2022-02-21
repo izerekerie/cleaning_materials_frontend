@@ -62,7 +62,10 @@ function Sidebar() {
               <Image   src={logout}/>
               </div>
             <div className='mb-6 text-left  w-4/5 '>
-            <p className=' text-left text-grey'>Logout</p>
+              <Link href={'/'}>
+              <p className=' text-left text-grey'>Logout</p>
+              </Link>
+          
             </div>
         
             </div>
