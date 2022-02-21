@@ -27,7 +27,7 @@ export default function Home() {
       <Modal ariaHideApp={false} isOpen={isLogin} className="  bg-black shadow-lg flex justify-center h-screen  bg-opacity-60 p-12" >
           <div className="w-full md:w-1/3 p-4 bg-white">
             <div className="flex justify-end">
-            <Image alt='close' className="" height={15} width={20} src={close} onClick={()=>{setIsLogin(false)}}  alt="close"/>
+            <Image   height={15} width={20} src={close} onClick={()=>{setIsLogin(false)}}  alt="close"/>
             </div>
 
             <h1 className=' text-center  text-lg  font-semibold  text-blue p-4 '>Login</h1>
@@ -43,7 +43,7 @@ export default function Home() {
               
            <div className='flex justify-center m-6'>
              <Link href={'/dashboard'}>
-             <button onClick={()=>{setIsModalopen(false)}} className='p-2 bg-blue mt-5 w-1/4 text-white text-sm font-light rounded'>Login</button>
+             <button onClick={()=>{setIsLogin(false)}} className='p-2 bg-blue mt-5 w-1/4 text-white text-sm font-light rounded'>Login</button>
 
              </Link>
            </div>
@@ -56,7 +56,7 @@ export default function Home() {
           <Modal ariaHideApp={false} isOpen={isRegister} className="   bg-black shadow-lg flex justify-center h-auto h-scroll  bg-opacity-60 p-10" >
           <div className="w-full md:w-1/3 p-2 bg-white">
             <div className="flex justify-end">
-            <Image alt='close' height={15} width={20} src={close} onClick={()=>{setIsLogin(false),setIsRegister(false)}}  alt="close"/>
+            <Image alt='close' height={15} width={20} src={close} onClick={()=>{setIsLogin(false),setIsRegister(false)}}/>
             </div>
 
             <h1 className=' text-center  text-lg  font-semibold  text-blue p-2 ' >Register</h1>

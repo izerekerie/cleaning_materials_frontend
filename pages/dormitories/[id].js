@@ -11,7 +11,7 @@ export default function Dormitory() {
     <div className='flex justify-between w-11/12 p-4'>
             <p className='pl-4 text-blue text-lg font-semibold p-2'>Girls Dormitory</p>
             <div className=' bg-blue p-1 flex '>
-              <Image height={16} width={20} src={add}/>
+              <Image  alt='add' height={16} width={20} src={add}/>
               <p className='text-white text-sm p-2 '>Make request</p></div>
           </div>
           <div className='h-auto p-8 m-8 shadow-lg'>

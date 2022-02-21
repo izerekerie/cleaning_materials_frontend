@@ -41,9 +41,9 @@ export default function Dormitories() {
            <p className='w-1/4 text-xs text-center'>Action</p>
            
           </div>
-         {dormitories.map((dorm)=>{
+         {dormitories.map((dorm,i)=>{
              return(
-                <div className='flex m-2 bg-white h-12 w-full  shadow-md p-2 pt-4'>
+                <div  key={i} className='flex m-2 bg-white h-12 w-full  shadow-md p-2 pt-4'>
                 <p className='w-1/4 text-xs text-grey text-center '>{dorm.name}</p>
                 <p className='w-1/4 text-xs text-center text-grey'>{dorm.total}</p>
                 <p className='w-1/4 text-xs text-center text-grey'>{dorm.createdAt}</p>

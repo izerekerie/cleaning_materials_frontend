@@ -34,9 +34,9 @@ export default function dashboard() {
           <Layout>
         <div className="h-full w-full text-blue-700 font-openSans">
           <div className='flex space-x-12 p-6'>
-            {panels.map((panel)=>{
+            {panels.map((panel,i)=>{
               return(
-                <div className={` w-full h-24 shadow-md p-4  ${panel.textColor}`} >
+                <div key={i} className={` w-full h-24 shadow-md p-4  ${panel.textColor}`} >
                 <p className={` text-openSans text-lg  font-semibold text-center`}>{panel.title}</p>
                 <p className={`text-lg font-semibold text-center p-1`}>{panel.number}</p>
                 </div>

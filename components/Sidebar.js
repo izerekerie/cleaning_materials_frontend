@@ -5,7 +5,6 @@ import dash from '../public/images/dashboard.svg'
 import dorm from '../public/images/dorm.svg'
 import group from '../public/images/group.svg'
 import logout from '../public/images/logout.svg'
-import  { useRouter } from 'next/router'
 import Link from 'next/link'
 function Sidebar() {
 
@@ -26,10 +25,7 @@ function Sidebar() {
       link:'/materials'
     }
   ]
-  const handleClick=(link)=>{
-    const router=useRouter()
-    // router.push(link)
-  }
+
   
   return (
     <div className=' relative w-1/5 h-screen shadow-lg'>
@@ -43,9 +39,9 @@ function Sidebar() {
         <p className='text-center text-blue  font-semibold'>Mutoni_Denise</p>
         <p className='text-center text-sm  text-grey pb-8'>Metron</p>
 
-        {Links.map((link)=>{
+        {Links.map((link,i)=>{
           return(
-            <div  onClick={handleClick(link.link)} className=' mt-4 ml-12  flex   w-full h-12'>
+            <div key={i} className=' mt-4 ml-12  flex   w-full h-12'>
               <div className=' w-1/5 '>
               <Image alt='icon'   src={link.icon}/>
               </div>
@@ -57,7 +53,7 @@ function Sidebar() {
           )
 
         })}
-         <div onClick={handleClick('/logout')} className=' absolute bottom-2 ml-12  flex   w-full h-12'>
+         <div  className=' absolute bottom-2 ml-12  flex   w-full h-12'>
               <div className=' w-1/5 '>
               <Image alt='icon'   src={logout}/>
               </div>
