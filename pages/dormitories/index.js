@@ -62,7 +62,7 @@ export default function Dormitories() {
           <Modal ariaHideApp={false} isOpen={isModalOpen1} className="  bg-black shadow-lg flex justify-center h-screen  bg-opacity-60 p-12" >
           <div className="w-full h-72 md:w-1/3 p-4 bg-white">
             <div className="flex justify-end">
-            <Image alt='close'  height={15} width={20} src={close} onClick={()=>{setIsModalopen1(false)}}  alt="close"/>
+            <Image  height={15} width={20} src={close} onClick={()=>{setIsModalopen1(false)}}  alt="close"/>
             </div>
 
             <h1 className=' text-center  text-lg  font-semibold  text-blue p-4 '>Create New Dormitory</h1>
@@ -80,7 +80,7 @@ export default function Dormitories() {
           <Modal ariaHideApp={false} isOpen={isModalOpen2} className="  bg-black shadow-lg flex justify-center h-screen  bg-opacity-60 p-12" >
           <div className="w-full h-72 md:w-1/3 p-4 bg-white">
             <div className="flex justify-end">
-            <Image alt='close'  height={15} width={20} src={close} onClick={()=>{setIsModalopen2(false)}}  alt="close"/>
+            <Image   height={15} width={20} src={close} onClick={()=>{setIsModalopen2(false)}}  alt="close"/>
             </div>
 
             <h1 className=' text-center  text-lg  font-semibold  text-blue p-4 '>Edit Dormitory</h1>
