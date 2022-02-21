@@ -4,7 +4,7 @@ import Link from 'next/link'
 import home1 from '../public/images/home1.svg'
 import home2 from '../public/images/home2.svg'
 import close from '../public/images/close.svg'
-import { useState } from 'react'
+import React,{ useState } from 'react'
 export default function Home() {
   const [isLogin,setIsLogin]=useState(false)
   const [isRegister,setIsRegister]=useState(false)
@@ -17,17 +17,17 @@ export default function Home() {
      <div className='flex justify-between p-8 mb-0 m-12'>
        <p className='w-1/3 text-center text-blue font-bold mt-12 text-2xl' >Dormitory Cleaning Materials Management System</p>
       <div className='ml-12'>
-      <Image  width={400} src={home1}/>
+      <Image  alt='manage'  width={400} src={home1}/>
       </div>
      </div>
      <div className='absolute bottom-4'>
-      <Image  width={400} src={home2}/>
+      <Image  alt='tools' width={400} src={home2}/>
       </div>
 
       <Modal ariaHideApp={false} isOpen={isLogin} className="  bg-black shadow-lg flex justify-center h-screen  bg-opacity-60 p-12" >
           <div className="w-full md:w-1/3 p-4 bg-white">
             <div className="flex justify-end">
-            <Image className="" height={15} width={20} src={close} onClick={()=>{setIsLogin(false)}}  alt="close"/>
+            <Image alt='close' className="" height={15} width={20} src={close} onClick={()=>{setIsLogin(false)}}  alt="close"/>
             </div>
 
             <h1 className=' text-center  text-lg  font-semibold  text-blue p-4 '>Login</h1>
@@ -56,7 +56,7 @@ export default function Home() {
           <Modal ariaHideApp={false} isOpen={isRegister} className="   bg-black shadow-lg flex justify-center h-auto h-scroll  bg-opacity-60 p-10" >
           <div className="w-full md:w-1/3 p-2 bg-white">
             <div className="flex justify-end">
-            <Image className="" height={15} width={20} src={close} onClick={()=>{setIsLogin(false),setIsRegister(false)}}  alt="close"/>
+            <Image alt='close' height={15} width={20} src={close} onClick={()=>{setIsLogin(false),setIsRegister(false)}}  alt="close"/>
             </div>
 
             <h1 className=' text-center  text-lg  font-semibold  text-blue p-2 ' >Register</h1>

@@ -38,7 +38,7 @@ function Sidebar() {
           <Link href='/'>
           <p className='text-blue p-2 py-6 text-left font-bold'>DCMMS</p>
 </Link>
-        <Image className=' rounded-full' height={80} width={80} src={profilePic}/>
+        <Image alt='profilepic' className=' rounded-full' height={80} width={80} src={profilePic}/>
         </div>
         <p className='text-center text-blue  font-semibold'>Mutoni_Denise</p>
         <p className='text-center text-sm  text-grey pb-8'>Metron</p>
@@ -47,7 +47,7 @@ function Sidebar() {
           return(
             <div  onClick={handleClick(link.link)} className=' mt-4 ml-12  flex   w-full h-12'>
               <div className=' w-1/5 '>
-              <Image   src={link.icon}/>
+              <Image alt='icon'   src={link.icon}/>
               </div>
             <Link href={`${link.link}`}  className=' text-left  w-4/5 '>
             <p   className=' text-left text-blue'>{link.title}</p>
@@ -59,7 +59,7 @@ function Sidebar() {
         })}
          <div onClick={handleClick('/logout')} className=' absolute bottom-2 ml-12  flex   w-full h-12'>
               <div className=' w-1/5 '>
-              <Image   src={logout}/>
+              <Image alt='icon'   src={logout}/>
               </div>
             <div className='mb-6 text-left  w-4/5 '>
               <Link href={'/'}>

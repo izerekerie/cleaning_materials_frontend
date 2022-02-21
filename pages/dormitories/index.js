@@ -5,7 +5,7 @@ import Layout from '../../components/Layout'
 import close from '../../public/images/close.svg'
 import Modal from 'react-modal'
 import { useState } from 'react'
-export default function index() {
+export default function Dormitories() {
     const [isModalOpen1,setIsModalopen1]=useState(false)
     const [isModalOpen2,setIsModalopen2]=useState(false)
     const dormitories=[
@@ -30,7 +30,7 @@ export default function index() {
     <div className='flex justify-between w-11/12 p-4'>
             <p className='pl-4 text-blue text-lg font-semibold p-2'>Dormitories</p>
             <div className=' bg-blue p-1 flex '>
-              <Image height={16} width={20} src={add}/>
+              <Image alt='add' height={16} width={20} src={add}/>
               <p className='text-white text-sm p-2 ' onClick={()=>{setIsModalopen1(true)}}>Create new</p></div>
           </div>
           <div className='h-auto p-8 m-8 shadow-lg'>
@@ -62,7 +62,7 @@ export default function index() {
           <Modal ariaHideApp={false} isOpen={isModalOpen1} className="  bg-black shadow-lg flex justify-center h-screen  bg-opacity-60 p-12" >
           <div className="w-full h-72 md:w-1/3 p-4 bg-white">
             <div className="flex justify-end">
-            <Image className="" height={15} width={20} src={close} onClick={()=>{setIsModalopen1(false)}}  alt="close"/>
+            <Image alt='close'  height={15} width={20} src={close} onClick={()=>{setIsModalopen1(false)}}  alt="close"/>
             </div>
 
             <h1 className=' text-center  text-lg  font-semibold  text-blue p-4 '>Create New Dormitory</h1>
@@ -80,7 +80,7 @@ export default function index() {
           <Modal ariaHideApp={false} isOpen={isModalOpen2} className="  bg-black shadow-lg flex justify-center h-screen  bg-opacity-60 p-12" >
           <div className="w-full h-72 md:w-1/3 p-4 bg-white">
             <div className="flex justify-end">
-            <Image className="" height={15} width={20} src={close} onClick={()=>{setIsModalopen2(false)}}  alt="close"/>
+            <Image alt='close'  height={15} width={20} src={close} onClick={()=>{setIsModalopen2(false)}}  alt="close"/>
             </div>
 
             <h1 className=' text-center  text-lg  font-semibold  text-blue p-4 '>Edit Dormitory</h1>
