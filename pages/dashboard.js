@@ -1,31 +1,37 @@
-import React, {useState } from 'react'
+import React, {useState} from 'react'
 import Image from 'next/image'
 import Layout from '../components/Layout'
 import add from '../public/images/add.svg'
 import close from '../public/images/close.svg'
 import Modal from 'react-modal'
+import { useRouter } from 'next/router'
 export default function Dashboard() {
     const [isModalOpen,setIsModalopen]=useState(false)
+    const router=useRouter();
     const panels=[
         {
-          title:'Total Tools',
+          title:'Total Materials',
           textColor:'text-blue',
-          number:115
+          number:115,
+          path:'/materials'
         },
         {
-          title:'Requested Tools',
+          title:'Requested Materials',
           textColor:'text-green',
-          number:30
+          number:30,
+          path:'/dashboard'
         },
         {
-          title:'Categories Tools',
+          title:'Materials',
           textColor:'text-purple',
-          number:10
+          number:10,
+          path:'/materials'
         },
         {
           title:'Dormitories',
           textColor:'text-pink',
-          number:2
+          number:2,
+          path:'/dormitories'
         }
       ]
     
@@ -36,8 +42,8 @@ export default function Dashboard() {
           <div className='flex space-x-12 p-6'>
             {panels.map((panel,i)=>{
               return(
-                <div key={i} className={` w-full h-24 shadow-md p-4  ${panel.textColor}`} >
-                <p className={` text-openSans text-lg  font-semibold text-center`}>{panel.title}</p>
+                <div onClick={()=>{router.push(panel.path)}} key={i} className={` w-full h-24 shadow-md p-4  ${panel.textColor}`} >
+                <p className={` text-openSans text-l  font-semibold text-center`}>{panel.title}</p>
                 <p className={`text-lg font-semibold text-center p-1`}>{panel.number}</p>
                 </div>
             )})}
