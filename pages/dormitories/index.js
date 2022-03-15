@@ -5,9 +5,11 @@ import Layout from '../../components/Layout'
 import close from '../../public/images/close.svg'
 import Modal from 'react-modal'
 import { useState } from 'react'
+import { useRouter } from 'next/router'
 export default function Dormitories() {
     const [isModalOpen1,setIsModalopen1]=useState(false)
     const [isModalOpen2,setIsModalopen2]=useState(false)
+    const router=useRouter();
     const dormitories=[
         {
             name:'Girls Dormitory',
@@ -43,7 +45,7 @@ export default function Dormitories() {
           </div>
          {dormitories.map((dorm,i)=>{
              return(
-                <div  key={i} className='flex m-2 bg-white h-12 w-full  shadow-md p-2 pt-4'>
+                <div  onClick={()=>{router.push(`/dormitories/${dorm.id}`)}}  key={i} className='flex m-2 bg-white h-12 w-full  shadow-md p-2 pt-4'>
                 <p className='w-1/4 text-xs text-grey text-center '>{dorm.name}</p>
                 <p className='w-1/4 text-xs text-center text-grey'>{dorm.total}</p>
                 <p className='w-1/4 text-xs text-center text-grey'>{dorm.createdAt}</p>
